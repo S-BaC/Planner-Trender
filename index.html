@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner Trender</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calendar.js" defer></script>
+</head>
+<body>
+    <div id="navbarN" class="flex">
+        <h1>Planner</h1>
+    </div>
+
+    <div id="calendarC" class="flex">
+        <div class="calendarTableC">
+
+        </div>
+        <div id="monthChoosingScr">
+            <label onclick="turnOffScr()">X</label>
+            <form action="" id="monthChoosingForm" class="flex">
+                <label for="month">Month-Year</label>
+                <input type="date" name="month" id="date">
+                <button> SET </button>
+            </form>
+        </div>
+        <div class="eventC flex">
+            <div id="headC">
+
+            </div>
+            <form action="" class="eventFormC flex">
+                <label for="titleEC">Event</label>
+                <input type="text" id="titleEC" placeholder="your event title" value=""/>
+                <label for="desEC">Description</label>
+                <textarea placeholder="some details" id="desEC" value=""></textarea>
+                <label for="timeEC">Time</label>
+                <div>
+                    <input type="radio" id="dayEventC" name="timeEC" value="day" checked>
+                    <label for="dayEventC">Day</label>
+                    <input type="radio" id="nightEventC" name="timeEC" value="day">
+                    <label for="nightEventC">Evening</label>
+                </div>
+                <button>Add</button>
+            </form>
+            <div id="eventsC">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+:root{
+    --usafa-blue: #26547cff;
+    --paradise-pink: #ef476fff;
+    --orange-yellow-crayola: #ffd166ff;
+    --caribbean-green: #06d6a0ff;
+    --white: #fcfcfcff;
+    --black: #333;
+}
+
+body{
+    font-family:Georgia, Times, serif;
+    background-color: var(--white);
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbarN{
+    border-bottom: 3px double var(--black);
+    margin-bottom: 2vh;
+}
+
+#calendarC{
+    gap:2vw;
+    align-items: flex-start;
+}
+.calendarTableC{
+    display: grid;
+    width: clamp(500px, 700px, 1000px);
+    grid-template-columns: repeat(7,clamp(70px, 100px, 120px));
+}
+.calendarTableC > div{
+    text-align: center;
+    padding:20%;
+    margin:5%;
+    border:1px solid var(--black);
+    border-radius: 5px;
+}
+.daysC{
+    padding: 5% !important;
+    background-color: var(--black);
+    color: var(--white);
+}
+.calendarDaysC{
+    cursor: pointer;
+}
+.calendarDaysC:active{
+    transform: scale(0.9);
+}
+.emptyC{
+    visibility: hidden;
+}
+.daySelected{
+    background-color: var(--black);
+    color:var(--white);
+}
+.eventC{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#headC{
+    padding: 2vh 0;
+    text-align: center;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 3vh;
+    background-color: var(--black);
+    color:var(--white);
+}
+.eventFormC{
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2vh;
+}
+.eventFormC>input{
+    width:100%;
+    border:none;
+    background-color: var(--white);
+    height:3vh;
+}
+.eventFormC>textarea{
+    border:none;
+    background-color: var(--white);
+}
+.eventFormC > button{
+    margin:auto;
+    width:50%;
+    border:none;
+    background-color: var(--black);
+    color:var(--white);
+    padding:3%;
+    border-radius: 5px;
+}
+
+#setMonth{
+    grid-column: auto/span 2;
+    font-size: 1rem;
+    padding:0%;
+    text-align: center;
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+#monthChoosingScr{
+    position: absolute;
+    top: 0;left: 0;
+    width:100vw;height: 100vh;
+    backdrop-filter: blur(5px);
+    display:none;
+}
+#monthChoosingScr > label {
+    position: absolute;
+    right:3vw;
+    top:3vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    cursor:pointer;
+}
+#monthChoosingScr > form{
+    margin:auto;
+    margin-top: 30vh;
+    background-color: var(--black);
+    color:var(--white);
+    padding:2vw;
+    flex-direction: column;
+    width:30vw;
+    gap:1vh;
+    
+}
+#monthChoosingScr button{
+    border:none;
+    background-color: var(--white);
+    width:30%;
+    height:3vh;
+    margin-left: auto;
+    font-size: 1.2rem;
+}
+#monthChoosingForm input{
+    height:10vh;
+    font-size: 3rem;
+}
+#eventsC{
+    border-top: 0.5vh double var(--black);
+    width: 100%;
+}
+#eventsC p{
+    padding:0.2vh 2vh;line-height: 50%;
+}
+.eventDesC{
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.7;
+}
+.eventTitleC{
+    display:inline-block;
+    line-height: 1vh !important;
+    padding:1vh !important;
+    background-color: var(--black);
+    color:var(--white);
+}
